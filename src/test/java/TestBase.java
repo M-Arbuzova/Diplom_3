@@ -1,27 +1,33 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.time.Duration;
 
 public class TestBase {
-    protected WebDriver driver;
+    public WebDriver driver;
+    private UserApi userApi;
+    private String bearerToken;
     private final String URL = "https://stellarburgers.nomoreparties.site/";
 
     @Before
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "C:\\WebDriver\\bin\\chromedriver.exe");
-
-        driver = new ChromeDriver();
-
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--remote-allow-origins=*");
+        WebDriverManager.chromedriver().setup();
+        driver = new ChromeDriver(options);
         driver.get(URL);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
 
-    @After
-    public void tearDown() {
-        driver.quit();
-    }
+//       @After
+//        public void tearDown() {
+//        driver.quit();
+//        if (bearerToken == null) return;
+//        userApi.deleteUser(bearerToken);
+//  }
 }
 

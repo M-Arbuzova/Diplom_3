@@ -17,7 +17,7 @@ public class UserApi {
                 .setContentType(ContentType.JSON)
                 .build();
     }
-    public ValidatableResponse userReg(UserGenerateData.User user) {
+    public ValidatableResponse userReg(User user) {
         return given()
                 .spec(requestSpecification())
                 .and()
@@ -26,7 +26,7 @@ public class UserApi {
                 .post(CREATE_USER_API)
                 .then();
     }
-    public static ValidatableResponse userLogin(UserGenerateData.User user) {
+    public static ValidatableResponse userLogin(User user) {
         return given()
                 .spec(requestSpecification())
                 .and()
