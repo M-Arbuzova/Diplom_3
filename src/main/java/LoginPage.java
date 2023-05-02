@@ -1,0 +1,43 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+
+public class LoginPage {
+    private final By personalAccountBtn = By.xpath(".//p[contains(text(),'Личный Кабинет')]"); //кнопка личный кабинет
+    private final By registrationBtn = By.xpath(".//a[(@class = 'Auth_link__1fOlj' and text()= 'Зарегистрироваться')]"); //кнопка зарегистрироваться внизу
+    private final By forgottPasswordBtn = By.xpath(".//a[(@class = 'Auth_link__1fOlj' and text()= 'Восстановить пароль')]"); //кнопка восстановить пароль
+    private final By singInBtn = By.xpath(".//button[text()='Войти']"); //кнопка войти
+    private final By emailInput = By.xpath("//label[contains(text(),'Email')]/../input"); // поле емаил
+    private final By passwordInput = By.xpath("//label[contains(text(),'Пароль')]/../input"); //поле пароль
+
+    private final WebDriver driver;
+
+    public LoginPage(WebDriver webDriver) {
+        driver = webDriver;
+    }
+    public void clickSingInBtn(){
+        driver.findElement(singInBtn).click();
+    }
+    public void clickRegistrationBtn() {
+        driver.findElement(registrationBtn).click();
+    }
+    public void clickForgottPasswordBtn() {
+        driver.findElement(forgottPasswordBtn).click();
+    }
+    public void clickPersonalAccountBtn() {
+        driver.findElement(personalAccountBtn).click();
+    }
+    public void setEmailInput(String email) {
+        driver.findElement(emailInput).sendKeys(email);
+    }
+    public void setPasswordInput(String password) {
+        driver.findElement(passwordInput).sendKeys(password);
+    }
+
+    public void setSingInUserAccount(String email, String password){
+        clickPersonalAccountBtn();
+        setEmailInput(email);
+        setPasswordInput(password);
+        clickSingInBtn();
+    }
+}
+
