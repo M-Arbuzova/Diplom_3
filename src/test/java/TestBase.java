@@ -1,4 +1,5 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
+import io.restassured.response.ValidatableResponse;
 import org.junit.After;
 import org.junit.Before;
 import org.openqa.selenium.WebDriver;
@@ -9,8 +10,6 @@ import java.time.Duration;
 
 public class TestBase {
     public WebDriver driver;
-    private UserApi userApi;
-    private String bearerToken;
     private final String URL = "https://stellarburgers.nomoreparties.site/";
 
     @Before
@@ -23,11 +22,10 @@ public class TestBase {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
 
-//       @After
-//        public void tearDown() {
-//        driver.quit();
-//        if (bearerToken == null) return;
-//        userApi.deleteUser(bearerToken);
-//  }
+       @After
+        public void tearDown() {
+//          driver.quit();
+
+  }
 }
 

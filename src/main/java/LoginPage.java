@@ -1,6 +1,9 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+
 public class LoginPage {
     private final By personalAccountBtn = By.xpath(".//p[contains(text(),'Личный Кабинет')]"); //кнопка личный кабинет
     private final By registrationBtn = By.xpath(".//a[(@class = 'Auth_link__1fOlj' and text()= 'Зарегистрироваться')]"); //кнопка зарегистрироваться внизу
@@ -38,6 +41,10 @@ public class LoginPage {
         setEmailInput(email);
         setPasswordInput(password);
         clickSingInBtn();
+    }
+    public void checkSingInBtnIsDisplayed(){
+        assertThat("После выхода из профиля отображается кнопка Войти", true,
+                equalTo(driver.findElement(personalAccountBtn).isDisplayed()));
     }
 }
 

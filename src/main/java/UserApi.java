@@ -35,7 +35,7 @@ public class UserApi {
                 .post(LOGIN_API)
                 .then();
     }
-    public ValidatableResponse deleteUser(String bearerToken) {
+    public static ValidatableResponse deleteUser(String bearerToken) {
         return given()
                 .spec(requestSpecification())
                 .headers("Authorization", bearerToken)

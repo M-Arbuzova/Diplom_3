@@ -1,11 +1,12 @@
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
+import io.restassured.response.ValidatableResponse;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Test;
 
 public class CreateUserTest extends TestBase{
     User user;
-    UserApi userApi;
+    UserApi userApi = new UserApi();
     private String bearerToken;
 
     @Test
@@ -24,6 +25,12 @@ public class CreateUserTest extends TestBase{
         loginPage.setSingInUserAccount(user.getEmail(), user.getPassword());
         mainPage.clickPersonalAccountBtn();
         profilePage.checkAccountTextIsDisplayed();
+
+        ValidatableResponse responseLogin = UserApi.userLogin(user);
+        bearerToken = responseLogin.extract().path("accessToken");
+        if (bearerToken == null) return;
+        UserApi.deleteUser(bearerToken);
+
     }
     @Test
     @DisplayName("Регистрация пользователя с валидными данными через API")
@@ -40,6 +47,11 @@ public class CreateUserTest extends TestBase{
         loginPage.setSingInUserAccount(user.getEmail(), user.getPassword());
         mainPage.clickPersonalAccountBtn();
         profilePage.checkAccountTextIsDisplayed();
+
+        ValidatableResponse responseLogin = UserApi.userLogin(user);
+        bearerToken = responseLogin.extract().path("accessToken");
+        if (bearerToken == null) return;
+        UserApi.deleteUser(bearerToken);
     }
     @Test
     @DisplayName("Регистрация пользователя с коротким паролем")
@@ -55,5 +67,10 @@ public class CreateUserTest extends TestBase{
         loginPage.clickRegistrationBtn();
         registrationPage.setRegistrationNewUser(user.getName(), user.getEmail(), user.getPassword());
         registrationPage.checkErrorAboutShortPassword();
+
+        ValidatableResponse responseLogin = UserApi.userLogin(user);
+        bearerToken = responseLogin.extract().path("accessToken");
+        if (bearerToken == null) return;
+        UserApi.deleteUser(bearerToken);
     }
 }
