@@ -1,5 +1,7 @@
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
@@ -9,7 +11,7 @@ public class RegistrationPage {
     private final By emailInput = By.xpath("//label[contains(text(),'Email')]/../input"); // поле email
     private final By passwordInput = By.xpath("//label[contains(text(),'Пароль')]/../input"); // поле пароль
     private final By registrationFinallyBtn = By.xpath(".//button[text()='Зарегистрироваться']"); //кнопка зарегистрироваться
-    private final By singInBtn = By.xpath(".//a[text()='Войти']"); //кнопка вход
+    private final By singInBtn = By.xpath("//a[text()='Войти']"); //кнопка вход
     private final By errorShortPassword = By.xpath(".//p[text() = 'Некорректный пароль']"); //информация о некорректном пароле
 
 

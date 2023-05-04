@@ -9,6 +9,9 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import java.time.Duration;
 
 public class TestBase {
+    User user;
+    UserApi userApi = new UserApi();
+    private String bearerToken;
     public WebDriver driver;
     private final String URL = "https://stellarburgers.nomoreparties.site/";
 
@@ -20,11 +23,16 @@ public class TestBase {
         driver = new ChromeDriver(options);
         driver.get(URL);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
     }
 
        @After
         public void tearDown() {
 //          driver.quit();
+           ValidatableResponse responseLogin = UserApi.userLogin(user);
+           bearerToken = responseLogin.extract().path("accessToken");
+           if (bearerToken == null) return;
+           UserApi.deleteUser(bearerToken);
 
   }
 }

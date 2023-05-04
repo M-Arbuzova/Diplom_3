@@ -11,6 +11,8 @@ public class LoginPage {
     private final By singInBtn = By.xpath(".//button[text()='Войти']"); //кнопка войти
     private final By emailInput = By.xpath("//label[contains(text(),'Email')]/../input"); // поле емаил
     private final By passwordInput = By.xpath("//label[contains(text(),'Пароль')]/../input"); //поле пароль
+    private final By constructorBtn = By.xpath(".//p[text()='Конструктор']"); //кнопка конструктор
+
 
     private final WebDriver driver;
 
@@ -45,6 +47,9 @@ public class LoginPage {
     public void checkSingInBtnIsDisplayed(){
         assertThat("После выхода из профиля отображается кнопка Войти", true,
                 equalTo(driver.findElement(personalAccountBtn).isDisplayed()));
+    }
+    public void clickConstructorBtn(){
+        driver.findElement(constructorBtn).click();
     }
 }
 
