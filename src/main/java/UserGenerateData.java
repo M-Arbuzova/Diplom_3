@@ -1,6 +1,6 @@
 import org.apache.commons.lang3.RandomStringUtils;
 
-public class UserGenerateData extends User{
+public class UserGenerateData extends User {
     public User getRandomUser() {
         String email = RandomStringUtils.randomAlphabetic(9) + "@bk.ru";
         String password = RandomStringUtils.randomAlphabetic(9);

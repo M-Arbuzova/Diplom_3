@@ -1,11 +1,8 @@
-import org.hamcrest.MatcherAssert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.equalTo;
 
 public class MainPage {
     private final By personalAccountBtn = By.xpath(".//p[contains(text(),'Личный Кабинет')]"); //кнопка личный кабинет
@@ -62,6 +59,7 @@ public class MainPage {
         assertThat("Отображается раздел Соберите бургер", true,
                 equalTo(driver.findElement(By.xpath(".//h1[text() = 'Соберите бургер']")).isDisplayed()));
     }
+
     public void checkCreateBurgerBtnIsDisplayed() {
         assertThat("Отображается кнопка Оформить заказ", true,
                 equalTo(driver.findElement(createOrderBtn).isDisplayed()));

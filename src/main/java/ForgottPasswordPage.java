@@ -9,6 +9,7 @@ public class ForgottPasswordPage {
     public ForgottPasswordPage(WebDriver webDriver) {
         driver = webDriver;
     }
+
     public void clickSingInBtn() {
         driver.findElement(singInBtn).click();
     }

@@ -1,10 +1,9 @@
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
-import io.restassured.response.ValidatableResponse;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.junit.Test;
 
-public class CreateUserTest extends TestBase{
+public class CreateUserTest extends TestBase {
     @Test
     @DisplayName("Регистрация пользователя с валидными данными")
     @Description("Проверка, что можно зарегистрировать пользователя с валидными данными ")
@@ -22,6 +21,8 @@ public class CreateUserTest extends TestBase{
         mainPage.clickPersonalAccountBtn();
         profilePage.checkAccountTextIsDisplayed();
     }
+
+    //при обсуждении кейса ниже у некоторых появлялся баг, что пользователь не логинился. поэтому решила добавить тест
     @Test
     @DisplayName("Регистрация пользователя с валидными данными через API")
     @Description("Проверка, что можно зарегистрировать пользователя с валидными данными через API")
@@ -29,8 +30,6 @@ public class CreateUserTest extends TestBase{
         MainPage mainPage = new MainPage(driver);
         LoginPage loginPage = new LoginPage(driver);
         ProfilePage profilePage = new ProfilePage(driver);
-        userApi = new UserApi();
-        user = new UserGenerateData().getRandomUser();
 
         userApi.userReg(user);
         mainPage.clickPersonalAccountBtn();
@@ -38,6 +37,7 @@ public class CreateUserTest extends TestBase{
         mainPage.clickPersonalAccountBtn();
         profilePage.checkAccountTextIsDisplayed();
     }
+
     @Test
     @DisplayName("Регистрация пользователя с коротким паролем")
     @Description("Проверка, что нельзя зарегистрировать пользователя с паролем менее 6 символов")

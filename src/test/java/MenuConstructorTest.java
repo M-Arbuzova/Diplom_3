@@ -13,6 +13,7 @@ public class MenuConstructorTest extends TestBase {
         mainPage.clickBunBtn();
         mainPage.checkBunsIsDisplayed();
     }
+
     @Test
     @DisplayName("Переход к разделу 'Соусы'")
     @Description("Проверка, что можно перейти в раздел 'Соусы' ")
@@ -23,6 +24,7 @@ public class MenuConstructorTest extends TestBase {
         mainPage.clickSaucesBtn();
         mainPage.checkSaucesIsDisplayed();
     }
+
     @Test
     @DisplayName("Переход к разделу 'Начинки'")
     @Description("Проверка, что можно перейти в раздел 'Начинки' ")
