@@ -4,11 +4,47 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="052d188f-31d3-4c39-9f25-656627c87f98" name="Changes" comment="" />
+    <list default="true" id="052d188f-31d3-4c39-9f25-656627c87f98" name="Changes" comment="Add test classes">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/chromedriver.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/yandexdriver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ForgottPasswordPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ForgottPasswordPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProfilePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegistrationPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegistrationPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserGenerateData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserGenerateData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/CreateUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CreateUserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GoToAndFromProfilePageTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GoToAndFromProfilePageTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MenuConstructorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MenuConstructorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SingInProfileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SingInProfileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SingOutTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/SingOutTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestBase.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -26,9 +62,81 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Diplom\Diplom_3\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.CreateUserTest and 4 more">
+    <configuration name="CreateUserTest and 4 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_3" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="CreateUserTest" />
+        <pattern testClass="GoToAndFromProfilePageTest" />
+        <pattern testClass="MenuConstructorTest" />
+        <pattern testClass="SingInProfileTest" />
+        <pattern testClass="SingOutTest" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GoToAndFromProfilePageTest.goToProfilePageWithAuth" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_3" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GoToAndFromProfilePageTest" />
+      <option name="METHOD_NAME" value="goToProfilePageWithAuth" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MenuConstructorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_3" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MenuConstructorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingInProfileTest.singInWithBtnOnRegistrationPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_3" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SingInProfileTest" />
+      <option name="METHOD_NAME" value="singInWithBtnOnRegistrationPage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingOutTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Diplom_3" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SingOutTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CreateUserTest and 4 more" />
+        <item itemvalue="JUnit.MenuConstructorTest" />
+        <item itemvalue="JUnit.SingInProfileTest.singInWithBtnOnRegistrationPage" />
+        <item itemvalue="JUnit.GoToAndFromProfilePageTest.goToProfilePageWithAuth" />
+        <item itemvalue="JUnit.SingOutTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -38,6 +146,40 @@
       <option name="presentableId" value="Default" />
       <updated>1682975243690</updated>
     </task>
+    <task id="LOCAL-00001" summary="Add classes">
+      <created>1683049404716</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1683049404716</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add test classes">
+      <created>1683069102887</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1683069102887</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add test classes">
+      <created>1683072345873</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1683072345873</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Add test classes">
+      <created>1683158955677</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683158955678</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add classes" />
+    <MESSAGE value="Add test classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add test classes" />
   </component>
 </project>
